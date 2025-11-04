@@ -20,8 +20,7 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
-  /// Throughput quota. This enum is not supported in Gemini API.
+  /// Output only. The traffic type for this request. This enum is not supported in Gemini API.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum TrafficType {
@@ -31,7 +30,7 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("TRAFFIC_TYPE_UNSPECIFIED")] TRAFFIC_TYPE_UNSPECIFIED,
 
     /// <summary>
-    /// Type for Pay-As-You-Go traffic.
+    /// The request was processed using Pay-As-You-Go quota.
     /// </summary>
     [JsonPropertyName("ON_DEMAND")] ON_DEMAND,
 

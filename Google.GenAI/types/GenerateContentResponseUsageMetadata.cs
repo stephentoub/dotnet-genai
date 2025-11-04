@@ -23,19 +23,22 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Usage metadata about response(s). This data type is not supported in Gemini API.
+  /// Usage metadata about the content generation request and response. This message provides a
+  /// detailed breakdown of token usage and other relevant metrics. This data type is not supported
+  /// in Gemini API.
   /// </summary>
 
   public record GenerateContentResponseUsageMetadata {
     /// <summary>
-    /// Output only. List of modalities of the cached content in the request input.
+    /// Output only. A detailed breakdown of the token count for each modality in the cached
+    /// content.
     /// </summary>
     [JsonPropertyName("cacheTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ModalityTokenCount> ? CacheTokensDetails { get; set; }
 
     /// <summary>
-    /// Output only. Number of tokens in the cached part in the input (the cached content).
+    /// Output only. The number of tokens in the cached content that was used for this request.
     /// </summary>
     [JsonPropertyName("cachedContentTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -45,7 +48,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Number of tokens in the response(s).
+    /// The total number of tokens in the generated candidates.
     /// </summary>
     [JsonPropertyName("candidatesTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -55,7 +58,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. List of modalities that were returned in the response.
+    /// Output only. A detailed breakdown of the token count for each modality in the generated
+    /// candidates.
     /// </summary>
     [JsonPropertyName("candidatesTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -65,8 +69,9 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Number of tokens in the request. When `cached_content` is set, this is still the total
-    /// effective prompt size meaning this includes the number of tokens in the cached content.
+    /// The total number of tokens in the prompt. This includes any text, images, or other media
+    /// provided in the request. When `cached_content` is set, this also includes the number of
+    /// tokens in the cached content.
     /// </summary>
     [JsonPropertyName("promptTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -76,7 +81,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. List of modalities that were processed in the request input.
+    /// Output only. A detailed breakdown of the token count for each modality in the prompt.
     /// </summary>
     [JsonPropertyName("promptTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -86,7 +91,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Number of tokens present in thoughts output.
+    /// Output only. The number of tokens that were part of the model's generated "thoughts" output,
+    /// if applicable.
     /// </summary>
     [JsonPropertyName("thoughtsTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -96,7 +102,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Number of tokens present in tool-use prompt(s).
+    /// Output only. The number of tokens in the results from tool executions, which are provided
+    /// back to the model as input, if applicable.
     /// </summary>
     [JsonPropertyName("toolUsePromptTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -106,7 +113,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. List of modalities that were processed for tool-use request inputs.
+    /// Output only. A detailed breakdown by modality of the token counts from the results of tool
+    /// executions, which are provided back to the model as input.
     /// </summary>
     [JsonPropertyName("toolUsePromptTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -116,7 +124,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Total token count for prompt, response candidates, and tool-use prompts (if present).
+    /// The total number of tokens for the entire request. This is the sum of `prompt_token_count`,
+    /// `candidates_token_count`, `tool_use_prompt_token_count`, and `thoughts_token_count`.
     /// </summary>
     [JsonPropertyName("totalTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -126,8 +135,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or
-    /// Provisioned Throughput quota.
+    /// Output only. The traffic type for this request.
     /// </summary>
     [JsonPropertyName("trafficType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -23,20 +23,19 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The configuration for a single speaker in a multi speaker setup. This data type is not
-  /// supported in Vertex AI.
+  /// Configuration for a single speaker in a multi speaker setup.
   /// </summary>
 
   public record SpeakerVoiceConfig {
     /// <summary>
-    /// The name of the speaker to use. Should be the same as in the prompt.
+    /// The name of the speaker. This should be the same as the speaker name used in the prompt.
     /// </summary>
     [JsonPropertyName("speaker")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string ? Speaker { get; set; }
 
     /// <summary>
-    /// The configuration for the voice to use.
+    /// The configuration for the voice of this speaker.
     /// </summary>
     [JsonPropertyName("voiceConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

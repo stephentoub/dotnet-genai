@@ -46,7 +46,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Text of the chunk.
+    /// Text of the place answer.
     /// </summary>
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -56,7 +56,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Title of the chunk.
+    /// Title of the place.
     /// </summary>
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -66,7 +66,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// URI reference of the chunk.
+    /// URI reference of the place.
     /// </summary>
     [JsonPropertyName("uri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

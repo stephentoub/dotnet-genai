@@ -47,8 +47,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by
-    /// Google search.
+    /// Optional. Specialized retrieval tool that is powered by Google Search.
     /// </summary>
     [JsonPropertyName("googleSearchRetrieval")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
