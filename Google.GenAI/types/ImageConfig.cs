@@ -36,6 +36,17 @@ namespace Google.GenAI.Types {
     public string ? AspectRatio { get; set; }
 
     /// <summary>
+    /// Optional. Specifies the size of generated images. Supported values are `1K`, `2K`, `4K`. If
+    /// not specified, the model will use default value `1K`.
+    /// </summary>
+    [JsonPropertyName("imageSize")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? ImageSize {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a ImageConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
