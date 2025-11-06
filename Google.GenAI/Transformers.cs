@@ -55,6 +55,14 @@ namespace Google.GenAI
         throw new ArgumentException($"Unsupported model type: {origin.GetType()}");
       }
 
+      if (model.Length == 0)
+      {
+        throw new ArgumentException("model is required.");
+      }
+      if (model.Contains("..") || model.Contains("?") || model.Contains("&"))
+      {
+        throw new ArgumentException("invalid model parameter.");
+      }
       if (apiClient.VertexAI)
       {
         if (model.StartsWith("publishers/")
