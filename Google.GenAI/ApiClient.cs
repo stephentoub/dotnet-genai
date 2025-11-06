@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-using System.Collections.Immutable;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
@@ -166,23 +165,23 @@ namespace Google.GenAI
 
       var mergedOptions = this.HttpOptions with { };
 
-      if (!string.IsNullOrEmpty(optionsToApply?.BaseUrl))
+      if (!string.IsNullOrEmpty(optionsToApply.BaseUrl))
       {
-        mergedOptions.BaseUrl = optionsToApply?.BaseUrl;
+        mergedOptions.BaseUrl = optionsToApply.BaseUrl;
       }
-      if (!string.IsNullOrEmpty(optionsToApply?.ApiVersion))
+      if (!string.IsNullOrEmpty(optionsToApply.ApiVersion))
       {
-        mergedOptions.ApiVersion = optionsToApply?.ApiVersion;
+        mergedOptions.ApiVersion = optionsToApply.ApiVersion;
       }
-      if (optionsToApply?.Timeout != null)
+      if (optionsToApply.Timeout != null)
       {
-        mergedOptions.Timeout = optionsToApply?.Timeout;
+        mergedOptions.Timeout = optionsToApply.Timeout;
       }
 
-      var currentHeaders = this.HttpOptions.Headers ?? new Dictionary<string, string>(ImmutableDictionary<string, string>.Empty);
-      var newHeaders = optionsToApply.Headers ?? new Dictionary<string, string>(ImmutableDictionary<string, string>.Empty);
+      var currentHeaders = this.HttpOptions.Headers ?? new Dictionary<string, string>();
+      var newHeaders = optionsToApply.Headers ?? new Dictionary<string, string>();
 
-      var headersBuilder = ImmutableDictionary.CreateBuilder<string, string>(StringComparer.OrdinalIgnoreCase);
+      var headersBuilder = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
       foreach (var header in currentHeaders)
       {
@@ -207,21 +206,23 @@ namespace Google.GenAI
           headersBuilder[header.Key] = header.Value;
         }
       }
-      mergedOptions.Headers = new Dictionary<string, string>(headersBuilder.ToImmutable());
+      mergedOptions.Headers = headersBuilder;
 
       return mergedOptions;
     }
 
     internal static HttpOptions GetDefaultHttpOptions(bool vertexAI, string? location)
     {
-      var defaultHeadersBuilder = ImmutableDictionary.CreateBuilder<string, string>(StringComparer.OrdinalIgnoreCase);
-      defaultHeadersBuilder.Add("Content-Type", "application/json");
-      defaultHeadersBuilder.Add("User-Agent", GetLibraryVersion());
-      defaultHeadersBuilder.Add("x-goog-api-client", GetLibraryVersion());
+      var defaultHeadersBuilder = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+      {
+        ["Content-Type"] = "application/json",
+        ["User-Agent"] = GetLibraryVersion(),
+        ["x-goog-api-client"] = GetLibraryVersion(),
+      };
 
       var defaultHttpOptions = new HttpOptions
       {
-        Headers = new Dictionary<string, string>(defaultHeadersBuilder.ToImmutable()),
+        Headers = defaultHeadersBuilder,
       };
 
       if (vertexAI)
