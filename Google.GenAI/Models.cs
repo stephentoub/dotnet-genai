@@ -1465,8 +1465,7 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "baseSteps" }) != null) {
-        Common.SetValueByPath(parentObject,
-                              new string[] { "parameters", "editConfig", "baseSteps" },
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "baseSteps" },
                               Common.GetValueByPath(fromObject, new string[] { "baseSteps" }));
       }
 
