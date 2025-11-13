@@ -1,5 +1,18 @@
 # Changelog
 
+## Version 0.5.0, released 2025-11-12
+
+
+### New features
+
+* Add FileSearch tool and associated FileSearchStore management APIs ([b4734d7](https://github.com/googleapis/dotnet-genai/commit/b4734d70b8d243f78ed27e6c548036fec82d6ee9))
+* Add image_size to ImageConfig (Early Access Program) ([587208c](https://github.com/googleapis/dotnet-genai/commit/587208caa6554ec2f5beb2862f69ed38c430346c))
+
+
+### Bug fixes
+
+* Fix base_steps parameter for recontext_image ([0f22c7e](https://github.com/googleapis/dotnet-genai/commit/0f22c7e6ce2f257faff75786496f25136b616ca6))
+
 ## Version 0.4.0, released 2025-11-05
 
 
