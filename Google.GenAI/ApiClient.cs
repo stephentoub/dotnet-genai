@@ -17,7 +17,6 @@
 using System.Collections.Immutable;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Threading;
 
 using Google.Apis.Auth.OAuth2;
 using Google.GenAI.Types;

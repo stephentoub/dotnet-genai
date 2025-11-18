@@ -14,12 +14,9 @@
  * limitations under the License.
  */
 
-using System.Collections.Generic;
-using System.IO;
 using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Text;
-using System.Threading;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
