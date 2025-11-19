@@ -165,6 +165,141 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode CountTokensConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }))) {
+        throw new NotSupportedException(
+            "systemInstruction parameter is not supported in Gemini API.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "tools" }))) {
+        throw new NotSupportedException("tools parameter is not supported in Gemini API.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "generationConfig" }))) {
+        throw new NotSupportedException(
+            "generationConfig parameter is not supported in Gemini API.");
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode CountTokensConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "systemInstruction" },
+                              Transformers.TContent(Common.GetValueByPath(
+                                  fromObject, new string[] { "systemInstruction" })));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "tools" }) != null) {
+        JsonArray keyArray = (JsonArray)Common.GetValueByPath(fromObject, new string[] { "tools" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(ToolToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+        }
+        Common.SetValueByPath(parentObject, new string[] { "tools" }, result);
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "generationConfig" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "generationConfig" },
+            GenerationConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                         fromObject, new string[] { "generationConfig" }))),
+                                     toObject));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode CountTokensParametersToMldev(ApiClient apiClient, JsonNode fromObject,
+                                                   JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "_url", "model" },
+            Transformers.TModel(this._apiClient,
+                                Common.GetValueByPath(fromObject, new string[] { "model" })));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "contents" }) != null) {
+        JsonArray keyArray =
+            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "contents" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(ContentToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "contents" }, result);
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
+        _ = CountTokensConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                         fromObject, new string[] { "config" }))),
+                                     toObject);
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode CountTokensParametersToVertex(ApiClient apiClient, JsonNode fromObject,
+                                                    JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "_url", "model" },
+            Transformers.TModel(this._apiClient,
+                                Common.GetValueByPath(fromObject, new string[] { "model" })));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "contents" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "contents" },
+            Transformers.TContents(Common.GetValueByPath(fromObject, new string[] { "contents" })));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
+        _ = CountTokensConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                          fromObject, new string[] { "config" }))),
+                                      toObject);
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode CountTokensResponseFromMldev(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "totalTokens" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "totalTokens" },
+                              Common.GetValueByPath(fromObject, new string[] { "totalTokens" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "cachedContentTokenCount" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "cachedContentTokenCount" },
+            Common.GetValueByPath(fromObject, new string[] { "cachedContentTokenCount" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode CountTokensResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "totalTokens" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "totalTokens" },
+                              Common.GetValueByPath(fromObject, new string[] { "totalTokens" }));
+      }
+
+      return toObject;
+    }
+
     internal JsonNode EditImageConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -1313,6 +1448,141 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "labels" },
                               Common.GetValueByPath(fromObject, new string[] { "labels" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode GenerationConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "modelConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseJsonSchema" },
+            Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "audioTimestamp" },
+                              Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "candidateCount" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "candidateCount" },
+                              Common.GetValueByPath(fromObject, new string[] { "candidateCount" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "enableAffectiveDialog" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "enableAffectiveDialog" },
+            Common.GetValueByPath(fromObject, new string[] { "enableAffectiveDialog" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "frequencyPenalty" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "frequencyPenalty" },
+            Common.GetValueByPath(fromObject, new string[] { "frequencyPenalty" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "logprobs" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "logprobs" },
+                              Common.GetValueByPath(fromObject, new string[] { "logprobs" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "maxOutputTokens" },
+            Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "mediaResolution" },
+            Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "presencePenalty" },
+            Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseLogprobs" },
+            Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseMimeType" },
+            Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "responseModalities" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseModalities" },
+            Common.GetValueByPath(fromObject, new string[] { "responseModalities" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "responseSchema" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "responseSchema" },
+                              Common.GetValueByPath(fromObject, new string[] { "responseSchema" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "routingConfig" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "routingConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "routingConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "seed" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "seed" },
+                              Common.GetValueByPath(fromObject, new string[] { "seed" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "speechConfig" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "speechConfig" },
+            SpeechConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                     fromObject, new string[] { "speechConfig" }))),
+                                 toObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "stopSequences" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "stopSequences" },
+                              Common.GetValueByPath(fromObject, new string[] { "stopSequences" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "temperature" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "temperature" },
+                              Common.GetValueByPath(fromObject, new string[] { "temperature" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "thinkingConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "topK" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "topK" },
+                              Common.GetValueByPath(fromObject, new string[] { "topK" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "topP" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "topP" },
+                              Common.GetValueByPath(fromObject, new string[] { "topP" }));
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }))) {
+        throw new NotSupportedException(
+            "enableEnhancedCivicAnswers parameter is not supported in Vertex AI.");
       }
 
       return toObject;
@@ -2656,6 +2926,74 @@ namespace Google.GenAI {
     }
 
     /// <summary>
+    /// Counts the number of tokens in the provided content.
+    /// </summary>
+    /// <param name="model">The name of the GenAI model to use for token counting.</param>
+    /// <param name="contents">A <see cref="List{Content}"/> to count tokens for.</param>
+    /// <param name="config">A <see cref="CountTokensConfig"/> instance that specifies the
+    /// optional configurations.</param>
+    /// <returns>A <see cref="Task{CountTokensResponse}"/> that represents the asynchronous
+    /// operation. The task result contains a <see cref="CountTokensResponse"/> instance with
+    /// the total token count and other metadata.</returns>
+
+    public async Task<CountTokensResponse> CountTokensAsync(string model, List<Content> contents,
+                                                            CountTokensConfig config) {
+      CountTokensParameters parameter = new CountTokensParameters();
+
+      if (!Common.IsZero(model)) {
+        parameter.Model = model;
+      }
+      if (!Common.IsZero(contents)) {
+        parameter.Contents = contents;
+      }
+      if (!Common.IsZero(config)) {
+        parameter.Config = config;
+      }
+      string jsonString = JsonSerializer.Serialize(parameter);
+      JsonNode? parameterNode = JsonNode.Parse(jsonString);
+      if (parameterNode == null) {
+        throw new NotSupportedException("Failed to parse CountTokensParameters to JsonNode.");
+      }
+
+      JsonNode body;
+      string path;
+      if (this._apiClient.VertexAI) {
+        body = CountTokensParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        path = Common.FormatMap("{model}:countTokens", body["_url"]);
+      } else {
+        body = CountTokensParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        path = Common.FormatMap("{model}:countTokens", body["_url"]);
+      }
+      JsonObject? bodyObj = body?.AsObject();
+      bodyObj?.Remove("_url");
+      // TODO: Handle "_query" in the body (for list support).
+      bodyObj?.Remove("_query");
+      HttpOptions? requestHttpOptions = config?.HttpOptions;
+
+      ApiResponse response = await this._apiClient.RequestAsync(
+          HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
+      HttpContent httpContent = response.GetEntity();
+      string contentString = await httpContent.ReadAsStringAsync();
+      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      if (httpContentNode == null) {
+        throw new NotSupportedException("Failed to parse response to JsonNode.");
+      }
+      JsonNode responseNode = httpContentNode;
+
+      if (this._apiClient.VertexAI) {
+        responseNode = CountTokensResponseFromVertex(httpContentNode, new JsonObject());
+      }
+
+      if (!this._apiClient.VertexAI) {
+        responseNode = CountTokensResponseFromMldev(httpContentNode, new JsonObject());
+      }
+
+      return JsonSerializer.Deserialize<CountTokensResponse>(responseNode.ToString()) ??
+             throw new InvalidOperationException(
+                 "Failed to deserialize Task<CountTokensResponse>.");
+    }
+
+    /// <summary>
     /// Generates content given a GenAI model and a list of content.
     /// </summary>
     /// <param name="model">The name of the GenAI model to use for generation.</param>
@@ -2814,6 +3152,38 @@ namespace Google.GenAI {
       }
 
       return await PrivateUpscaleImageAsync(model, image, upscaleFactor, apiConfig);
+    }
+
+    /// <summary>
+    /// Counts the number of tokens in the provided content.
+    /// </summary>
+    /// <param name="model">The name of the GenAI model to use for token counting.</param>
+    /// <param name="contents">A <see cref="Content"/> to count tokens for.</param>
+    /// <param name="config">A <see cref="CountTokensConfig"/> instance that specifies the
+    /// optional configurations.</param>
+    /// <returns>A <see cref="Task{CountTokensResponse}"/> that represents the asynchronous
+    /// operation. The task result contains a <see cref="CountTokensResponse"/> instance with
+    /// the total token count and other metadata.</returns>
+    public async Task<CountTokensResponse> CountTokensAsync(String model, Content contents,
+                                                            CountTokensConfig? config = null) {
+      List<Content> contentList = Transformers.TContents(contents) ?? new List<Content>();
+      return await CountTokensAsync(model, contentList, config);
+    }
+
+    /// <summary>
+    /// Counts the number of tokens in the provided content.
+    /// </summary>
+    /// <param name="model">The name of the GenAI model to use for token counting.</param>
+    /// <param name="contents">A text string to send to count tokens for.</param>
+    /// <param name="config">A <see cref="CountTokensConfig"/> instance that specifies the
+    /// optional configurations.</param>
+    /// <returns>A <see cref="Task{CountTokensResponse}"/> that represents the asynchronous
+    /// operation. The task result contains a <see cref="CountTokensResponse"/> instance with
+    /// the total token count and other metadata.</returns>
+    public async Task<CountTokensResponse> CountTokensAsync(String model, String contents,
+                                                            CountTokensConfig? config = null) {
+      List<Content> contentList = Transformers.TContents(contents) ?? new List<Content>();
+      return await CountTokensAsync(model, contentList, config);
     }
   }
 }
