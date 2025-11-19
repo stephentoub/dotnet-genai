@@ -401,3 +401,47 @@ public class SegmentImageSimple {
   }
 }
 ```
+
+### Count Tokens
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class CountTokensExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var response = await client.Models.CountTokensAsync(
+      model: "gemini-2.0-flash",
+      contents: "What is the capital of France?"
+    );
+
+    Console.Writeline(response.TotalTokens);
+  }
+}
+
+```
+
+### Compute Tokens
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class ComputeTokensExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var response = await client.Models.ComputeTokensAsync(
+      model: "gemini-2.0-flash",
+      contents: "What is the capital of France?"
+    );
+
+    Console.Writeline(response.TokensInfo);
+  }
+}
+
+```
