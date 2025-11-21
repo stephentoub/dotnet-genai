@@ -155,7 +155,7 @@ namespace Google.GenAI
                   GetValueByPath(element, keys.Skip(i + 1).ToArray());
               if (node != null)
               {
-                result.Add(node);
+                result.Add(JsonNode.Parse(node.ToJsonString()));
               }
             }
             return result;

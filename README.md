@@ -445,3 +445,83 @@ public class ComputeTokensExample {
 }
 
 ```
+
+### Embed Content
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class EmbedContentExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var response = await client.Models.EmbedContentAsync(
+      model: "text-embedding-004",
+      contents: "What is the capital of France?"
+    );
+
+    Console.WriteLine(response.Embeddings[0].Values);
+  }
+}
+```
+
+### Get Tuned Model
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class GetModelExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var response = await client.Models.GetAsync(
+      model: "models/your-tuned-model"
+    );
+
+    Console.WriteLine(response.DisplayName);
+  }
+}
+```
+
+### Update Tuned Model
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class UpdateModelExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var response = await client.Models.UpdateAsync(
+      model: "models/your-tuned-model",
+      config: new UpdateModelConfig { Description = "updated model description" }
+    );
+
+    Console.WriteLine(response.Description);
+  }
+}
+```
+
+### Delete Tuned Model
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class DeleteModelExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    await client.Models.DeleteAsync(
+      model: "models/your-tuned-model"
+    );
+  }
+}
+```

@@ -399,50 +399,50 @@ namespace Google.GenAI
     /// <summary>Transforms an object to a list of Content for the embedding API.</summary>
     internal static List<object>? TContentsForEmbed(ApiClient apiClient, object origin)
     {
-      if (origin == null)
-      {
-        return null;
-      }
-
-      List<Content>? contents;
-      if (origin is List<Content> contentList)
-      {
-        contents = contentList;
-      }
-      /*else if (origin is JsonObject jsonObject)
-      {
-          contents = jsonObject.ToObject<List<Content>>();
-      }*/
-      else
-      {
-        throw new ArgumentException($"Unsupported contents type: {origin.GetType()}");
-      }
-
-      List<object> result = new List<object>();
-      if (contents != null)
-      {
-        foreach (Content content in contents)
+        if (origin == null)
         {
-          if (!apiClient.VertexAI)
-          {
-            result.Add(content);
-          }
-          else
-          {
-            if (content.Parts != null)
-            {
-              foreach (Part part in content.Parts)
-              {
-                if (part.Text != null)
-                {
-                  result.Add(part.Text);
-                }
-              }
-            }
-          }
+            return null;
         }
-      }
-      return result;
+
+        List<Content>? contents;
+        if (origin is List<Content> contentList)
+        {
+            contents = contentList;
+        }
+        else if (origin is JsonNode jsonNode)
+        {
+            contents = JsonSerializer.Deserialize<List<Content>>(jsonNode.ToJsonString());
+        }
+        else
+        {
+            throw new ArgumentException($"Unsupported contents type: {origin.GetType()}");
+        }
+
+        List<object> result = new List<object>();
+        if (contents != null)
+        {
+            foreach (Content content in contents)
+            {
+                if (!apiClient.VertexAI)
+                {
+                    result.Add(content);
+                }
+                else
+                {
+                    if (content.Parts != null)
+                    {
+                        foreach (Part part in content.Parts)
+                        {
+                            if (part.Text != null)
+                            {
+                                result.Add(part.Text);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return result;
     }
 
     /// <summary>

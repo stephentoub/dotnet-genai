@@ -162,7 +162,7 @@ namespace Google.GenAI
     private async Task<HttpRequestMessage> CreateHttpRequestAsync(HttpMethod httpMethod, string path,
         string requestJson, Types.HttpOptions? requestHttpOptions)
     {
-        bool queryBaseModel = httpMethod.Equals("GET") && path.StartsWith("publishers/google/models");
+        bool queryBaseModel = httpMethod == HttpMethod.Get && path.StartsWith("publishers/google/models");
         if (this.VertexAI && !path.StartsWith("projects/") && !queryBaseModel)
         {
             path = $"projects/{Project}/locations/{Location}/{path}";
