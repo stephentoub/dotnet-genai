@@ -3166,7 +3166,7 @@ namespace Google.GenAI {
     }
 
     private async Task<GenerateContentResponse> PrivateGenerateContentAsync(
-        string model, List<Content> contents, GenerateContentConfig? config = null) {
+        string model, List<Content> contents, GenerateContentConfig? config) {
       GenerateContentParameters parameter = new GenerateContentParameters();
 
       if (!Common.IsZero(model)) {
@@ -3223,7 +3223,7 @@ namespace Google.GenAI {
     }
 
     private async IAsyncEnumerable<GenerateContentResponse> PrivateGenerateContentStreamAsync(
-        string model, List<Content> contents, GenerateContentConfig? config = null) {
+        string model, List<Content> contents, GenerateContentConfig? config) {
       GenerateContentParameters parameter = new GenerateContentParameters();
 
       if (!Common.IsZero(model)) {
@@ -3344,7 +3344,7 @@ namespace Google.GenAI {
     }
 
     private async Task<GenerateImagesResponse> PrivateGenerateImagesAsync(
-        string model, string prompt, GenerateImagesConfig? config = null) {
+        string model, string prompt, GenerateImagesConfig? config) {
       GenerateImagesParameters parameter = new GenerateImagesParameters();
 
       if (!Common.IsZero(model)) {
@@ -3402,7 +3402,7 @@ namespace Google.GenAI {
 
     private async Task<EditImageResponse> PrivateEditImageAsync(
         string model, string prompt, List<ReferenceImageAPI> referenceImages,
-        EditImageConfig? config = null) {
+        EditImageConfig? config) {
       EditImageParameters parameter = new EditImageParameters();
 
       if (!Common.IsZero(model)) {
@@ -3460,7 +3460,7 @@ namespace Google.GenAI {
     }
 
     private async Task<UpscaleImageResponse> PrivateUpscaleImageAsync(
-        string model, Image image, string upscaleFactor, UpscaleImageAPIConfig? config = null) {
+        string model, Image image, string upscaleFactor, UpscaleImageAPIConfig? config) {
       UpscaleImageAPIParameters parameter = new UpscaleImageAPIParameters();
 
       if (!Common.IsZero(model)) {

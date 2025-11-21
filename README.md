@@ -467,7 +467,7 @@ public class EmbedContentExample {
 }
 ```
 
-### Get Tuned Model
+### Get Model
 
 ```csharp
 using Google.GenAI;
@@ -487,7 +487,7 @@ public class GetModelExample {
 }
 ```
 
-### Update Tuned Model
+### Update Model
 
 ```csharp
 using Google.GenAI;
@@ -508,7 +508,7 @@ public class UpdateModelExample {
 }
 ```
 
-### Delete Tuned Model
+### Delete Model
 
 ```csharp
 using Google.GenAI;
@@ -522,6 +522,132 @@ public class DeleteModelExample {
     await client.Models.DeleteAsync(
       model: "models/your-tuned-model"
     );
+  }
+}
+```
+
+
+## Tunings
+The `client.Tunings` module exposes model tuning. See `Create a client`
+section above to initialize a client.
+
+### Create Tuning Job
+
+#### With simple training data
+
+```csharp
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class CreateTuningJobSimple {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+    var trainingDataset = new TuningDataset {
+      GcsUri = "gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl"
+    };
+    var tuningJob = await client.Tunings.TuneAsync(
+      baseModel: "gemini-2.5-flash",
+      trainingDataset: trainingDataset,
+    );
+    Console.WriteLine(tuningJob.State);
+  }
+}
+```
+
+#### Hyperparameters and Other Configs
+
+The tuning job can be configured by several optional settings
+available in Tune's config parameter. For example, we can configure
+the number of epochs to train for, or specify a validation dataset.
+
+```csharp
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class CreateTuningJobWithConfig {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+    var trainingDataset = new TuningDataset {
+      GcsUri = "gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl"
+    };
+    var validationDataset = new TuningValidationDataset {
+      GcsUri = "gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_validation_data.jsonl"
+    };
+    var config = new CreateTuningJobConfig {
+      TunedModelDisplayName = "Tuned Model",
+      EpochCount = 3,
+      LearningRateMultiplier = 0.5,
+      ValidationDataset = validationDataset,
+    };
+    var tuningJob = await client.Tunings.TuneAsync(
+      baseModel: "gemini-2.5-flash",
+      trainingDataset: trainingDataset,
+      config: config,
+    );
+    Console.WriteLine(tuningJob.State);
+  }
+}
+```
+
+### Preference Tuning
+
+You can perform preference tuning by setting `Method` to `TuningMethod.PREFERENCE_TUNING` in `CreateTuningJobConfig`.
+
+```csharp
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class PreferenceTuningJob {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+    var trainingDataset = new TuningDataset {
+      GcsUri = "gs://cloud-samples-data/ai-platform/generative_ai/gemini-1_5/text/sft_train_data.jsonl"
+    };
+    var config = new CreateTuningJobConfig {
+      TunedModelDisplayName = "Tuned Model",
+      Method = TuningMethod.PREFERENCE_TUNING,
+      EpochCount = 1,
+    };
+    var tuningJob = await client.Tunings.TuneAsync(
+      baseModel: "gemini-2.5-flash",
+      trainingDataset: trainingDataset,
+      config: config,
+    );
+    Console.WriteLine(tuningJob.State);
+  }
+}
+```
+
+### Continuous Tuning
+
+You can perform continuous tuning on a previously tuned model by passing
+the tuned model's resource name as the `baseModel` parameter.
+
+```csharp
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class ContinuousTuningJob {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+    var trainingDataset = new TuningDataset {
+      GcsUri = "gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl"
+    };
+    // Continuously tune a previously tuned model by passing in its resource name.
+    var tunedModelResourceName = "models/your-tuned-model";
+    var tuningJob = await client.Tunings.TuneAsync(
+      baseModel: tunedModelResourceName,
+      trainingDataset: trainingDataset,
+    );
+    Console.WriteLine(tuningJob.State);
   }
 }
 ```

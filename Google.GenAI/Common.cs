@@ -107,7 +107,24 @@ namespace Google.GenAI
         }
       }
 
-      currentObject[path[path.Length - 1]] = ToJsonNode(value);
+      string finalKey = path[path.Length - 1];
+      JsonNode? newNode = ToJsonNode(value);
+
+      if (currentObject.ContainsKey(finalKey) && currentObject[finalKey] is JsonObject existingObject && newNode is JsonObject newObject)
+      {
+          foreach (KeyValuePair<string, JsonNode?> property in newObject)
+          {
+              existingObject[property.Key] = property.Value == null ? null : JsonNode.Parse(property.Value.ToJsonString());
+          }
+      }
+      else if(currentObject.ContainsKey(finalKey) && IsZero(value))
+      {
+          return;
+      }
+      else
+      {
+          currentObject[finalKey] = newNode;
+      }
     }
 
     /// <summary>
@@ -245,6 +262,18 @@ namespace Google.GenAI
       else if (obj is bool b)
       {
         return !b;
+      }
+      else if (obj is System.Collections.ICollection c)
+      {
+        return c.Count == 0;
+      }
+      else if (obj is JsonArray a)
+      {
+        return a.Count == 0;
+      }
+      else if (obj is JsonObject jo)
+      {
+        return jo.Count == 0;
       }
 
       return false;
