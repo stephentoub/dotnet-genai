@@ -56,6 +56,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Batches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Batches.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Batches",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Caches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Caches.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Caches",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Client.yml",
       "output": {
         ".html": {
@@ -210,6 +238,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Tunings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Tunings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Tunings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ActivityEnd.yml",
       "output": {
         ".html": {
@@ -249,6 +291,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ActivityStart",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ActivityStart.yml\" sourcestartlinenumber=\"1\">Marks the start of user activity.  This can only be sent if automatic (i.e. server-side)\nactivity detection is disabled.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.AdapterSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.AdapterSize.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.AdapterSize",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AdapterSize.yml\" sourcestartlinenumber=\"1\">Adapter size for tuning. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -420,6 +476,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.BatchJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.BatchJob.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.BatchJob",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BatchJob.yml\" sourcestartlinenumber=\"1\">Config for batches.create return value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.BatchJobDestination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.BatchJobDestination.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.BatchJobDestination",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BatchJobDestination.yml\" sourcestartlinenumber=\"1\">Config for <code sourcefile=\"api/Google.GenAI.Types.BatchJobDestination.yml\" sourcestartlinenumber=\"1\">des</code> parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.BatchJobSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.BatchJobSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.BatchJobSource",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BatchJobSource.yml\" sourcestartlinenumber=\"1\">Config for <code sourcefile=\"api/Google.GenAI.Types.BatchJobSource.yml\" sourcestartlinenumber=\"1\">src</code> parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Behavior.yml",
       "output": {
         ".html": {
@@ -462,6 +560,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CachedContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CachedContent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CachedContent",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CachedContent.yml\" sourcestartlinenumber=\"1\">A resource used in LLM queries for users to explicitly specify what to cache.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CachedContentUsageMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CachedContentUsageMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CachedContentUsageMetadata",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CachedContentUsageMetadata.yml\" sourcestartlinenumber=\"1\">Metadata on the usage of the cached content.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CancelBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CancelBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CancelBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CancelBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Candidate.yml",
       "output": {
         ".html": {
@@ -473,6 +613,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Candidate",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Candidate.yml\" sourcestartlinenumber=\"1\">A response candidate generated from the model.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.Checkpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.Checkpoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.Checkpoint",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Checkpoint.yml\" sourcestartlinenumber=\"1\">Describes the machine learning model version checkpoint.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -515,6 +669,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.CodeExecutionResult",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CodeExecutionResult.yml\" sourcestartlinenumber=\"1\">Result of executing the [ExecutableCode]. Only generated when using the [CodeExecution] tool,\nand always follows a <code sourcefile=\"api/Google.GenAI.Types.CodeExecutionResult.yml\" sourcestartlinenumber=\"2\">part</code> containing the [ExecutableCode].</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CompletionStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CompletionStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CompletionStats",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CompletionStats.yml\" sourcestartlinenumber=\"1\">Success and error statistics of processing multiple entities (for example, DataItems or\nstructured data rows) in batch. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -700,6 +868,202 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Config for optional parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateCachedContentConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateCachedContentConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateCachedContentConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional configuration for cached content creation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateEmbeddingsBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Config for optional parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateTuningJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateTuningJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateTuningJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateTuningJobConfig.yml\" sourcestartlinenumber=\"1\">Fine-tuning job creation request - optional fields.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DatasetDistribution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DatasetDistribution.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DatasetDistribution",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DatasetDistribution.yml\" sourcestartlinenumber=\"1\">Distribution computed over a tuning dataset. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DatasetDistributionDistributionBucket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DatasetDistributionDistributionBucket.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DatasetDistributionDistributionBucket",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DatasetDistributionDistributionBucket.yml\" sourcestartlinenumber=\"1\">Dataset bucket used to create a histogram for the distribution given a population of values.\nThis data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DatasetStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DatasetStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DatasetStats",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DatasetStats.yml\" sourcestartlinenumber=\"1\">Statistics computed over a tuning dataset. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for models.get method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteCachedContentConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteCachedContentConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteCachedContentConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for caches.delete method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteCachedContentResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteCachedContentResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteCachedContentResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteCachedContentResponse.yml\" sourcestartlinenumber=\"1\">Empty response for caches.delete method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteModelConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteModelConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteModelConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteModelConfig.yml\" sourcestartlinenumber=\"1\">Configuration for deleting a tuned model.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteModelResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteModelResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteModelResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteResourceJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteResourceJob.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteResourceJob",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteResourceJob.yml\" sourcestartlinenumber=\"1\">The return value of delete operation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DistillationDataStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DistillationDataStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DistillationDataStats",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DistillationDataStats.yml\" sourcestartlinenumber=\"1\">Statistics computed for datasets used for distillation. This data type is not supported in\nGemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.DownloadFileConfig.yml",
       "output": {
         ".html": {
@@ -812,6 +1176,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EmbedContentMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EmbedContentMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EmbedContentMetadata",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EmbedContentMetadata.yml\" sourcestartlinenumber=\"1\">Request-level metadata for the Vertex Embed Content API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EmbedContentResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EmbedContentResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EmbedContentResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EmbedContentResponse.yml\" sourcestartlinenumber=\"1\">Response for the embed_content method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EmbeddingsBatchJobSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EmbeddingsBatchJobSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EmbeddingsBatchJobSource",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EncryptionSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EncryptionSpec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EncryptionSpec",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EncryptionSpec.yml\" sourcestartlinenumber=\"1\">Represents a customer-managed encryption key spec that can be applied to a top-level resource.\nThis data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.EndSensitivity.yml",
       "output": {
         ".html": {
@@ -823,6 +1243,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.EndSensitivity",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EndSensitivity.yml\" sourcestartlinenumber=\"1\">End of speech sensitivity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.Endpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.Endpoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.Endpoint",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Endpoint.yml\" sourcestartlinenumber=\"1\">An endpoint where you deploy models.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1092,6 +1526,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GeminiPreferenceExample.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GeminiPreferenceExample.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GeminiPreferenceExample",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GeminiPreferenceExample.yml\" sourcestartlinenumber=\"1\">Input example for preference optimization. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GeminiPreferenceExampleCompletion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GeminiPreferenceExampleCompletion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GeminiPreferenceExampleCompletion",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GeminiPreferenceExampleCompletion.yml\" sourcestartlinenumber=\"1\">Completion and its preference score. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.GenerateContentConfig.yml",
       "output": {
         ".html": {
@@ -1274,6 +1736,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GetBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GetBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GetBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GetCachedContentConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GetCachedContentConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GetCachedContentConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for caches.get method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GetModelConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GetModelConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GetModelConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetModelConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for models.get method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GetTuningJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GetTuningJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GetTuningJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetTuningJobConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for tunings.get method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.GoogleMaps.yml",
       "output": {
         ".html": {
@@ -1285,6 +1803,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GoogleMaps",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleMaps.yml\" sourcestartlinenumber=\"1\">Tool to retrieve public maps data for grounding, powered by Google.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GoogleRpcStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GoogleRpcStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GoogleRpcStatus",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleRpcStatus.yml\" sourcestartlinenumber=\"1\">The <code sourcefile=\"api/Google.GenAI.Types.GoogleRpcStatus.yml\" sourcestartlinenumber=\"1\">Status</code> type defines a logical error model that is suitable for different programming\nenvironments, including REST APIs and RPC APIs. It is used by gRPC (<a href=\"https://github.com/grpc\" sourcefile=\"api/Google.GenAI.Types.GoogleRpcStatus.yml\" sourcestartlinenumber=\"2\">https://github.com/grpc</a>).\nEach <code sourcefile=\"api/Google.GenAI.Types.GoogleRpcStatus.yml\" sourcestartlinenumber=\"3\">Status</code> message contains three pieces of data: error code, error message, and error\ndetails. You can find out more about this error model and how to work with it in the API\nDesign Guide (<a href=\"https://cloud.google.com/apis/design/errors\" sourcefile=\"api/Google.GenAI.Types.GoogleRpcStatus.yml\" sourcestartlinenumber=\"5\">https://cloud.google.com/apis/design/errors</a>). This data type is not supported in\nGemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1680,6 +2212,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.InlinedRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.InlinedRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.InlinedRequest",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.InlinedRequest.yml\" sourcestartlinenumber=\"1\">Config for inlined request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.InlinedResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.InlinedResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.InlinedResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.InlinedResponse.yml\" sourcestartlinenumber=\"1\">Config for <code sourcefile=\"api/Google.GenAI.Types.InlinedResponse.yml\" sourcestartlinenumber=\"1\">inlined_responses</code> parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Interval.yml",
       "output": {
         ".html": {
@@ -1708,6 +2268,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.JobState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.JobState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.JobState",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.JobState.yml\" sourcestartlinenumber=\"1\">Job state.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Language.yml",
       "output": {
         ".html": {
@@ -1733,6 +2307,90 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LatLng",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LatLng.yml\" sourcestartlinenumber=\"1\">An object that represents a latitude/longitude pair.  This is expressed as a pair of doubles\nto represent degrees latitude and degrees longitude. Unless specified otherwise, this object\nmust conform to the &lt;a\nhref=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version&quot;&gt; WGS84\nstandard&lt;/a&gt;. Values must be within normalized ranges.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListBatchJobsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListBatchJobsConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListBatchJobsConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListBatchJobsConfig.yml\" sourcestartlinenumber=\"1\">Config for optional parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListBatchJobsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListBatchJobsResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListBatchJobsResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListBatchJobsResponse.yml\" sourcestartlinenumber=\"1\">Config for batches.list return value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListCachedContentsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListCachedContentsConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListCachedContentsConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListCachedContentsConfig.yml\" sourcestartlinenumber=\"1\">Config for caches.list method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListCachedContentsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListCachedContentsResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListCachedContentsResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListTuningJobsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListTuningJobsConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListTuningJobsConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListTuningJobsConfig.yml\" sourcestartlinenumber=\"1\">Configuration for the list tuning jobs method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListTuningJobsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListTuningJobsResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListTuningJobsResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListTuningJobsResponse.yml\" sourcestartlinenumber=\"1\">Response for the list tuning jobs method.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2128,6 +2786,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.Model.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.Model",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Model.yml\" sourcestartlinenumber=\"1\">A trained machine learning model.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ModelSelectionConfig.yml",
       "output": {
         ".html": {
@@ -2226,6 +2898,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PartnerModelTuningSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PartnerModelTuningSpec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PartnerModelTuningSpec",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PartnerModelTuningSpec.yml\" sourcestartlinenumber=\"1\">Tuning spec for Partner models. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.PersonGeneration.yml",
       "output": {
         ".html": {
@@ -2254,6 +2940,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PreTunedModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PreTunedModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PreTunedModel",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PreTunedModel.yml\" sourcestartlinenumber=\"1\">A pre-tuned model for continuous tuning. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.PrebuiltVoiceConfig.yml",
       "output": {
         ".html": {
@@ -2265,6 +2965,48 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.PrebuiltVoiceConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PrebuiltVoiceConfig.yml\" sourcestartlinenumber=\"1\">The configuration for the prebuilt speaker to use.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PreferenceOptimizationDataStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PreferenceOptimizationDataStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PreferenceOptimizationDataStats",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PreferenceOptimizationDataStats.yml\" sourcestartlinenumber=\"1\">Statistics computed for datasets used for preference optimization. This data type is not\nsupported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PreferenceOptimizationHyperParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PreferenceOptimizationHyperParameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PreferenceOptimizationHyperParameters",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PreferenceOptimizationHyperParameters.yml\" sourcestartlinenumber=\"1\">Hyperparameters for Preference Optimization. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PreferenceOptimizationSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PreferenceOptimizationSpec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PreferenceOptimizationSpec",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PreferenceOptimizationSpec.yml\" sourcestartlinenumber=\"1\">Preference optimization tuning spec for tuning.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2898,6 +3640,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SupervisedHyperParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SupervisedHyperParameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SupervisedHyperParameters",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SupervisedHyperParameters.yml\" sourcestartlinenumber=\"1\">Hyperparameters for SFT. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SupervisedTuningDataStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SupervisedTuningDataStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SupervisedTuningDataStats",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SupervisedTuningDataStats.yml\" sourcestartlinenumber=\"1\">Tuning data statistics for Supervised Tuning. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SupervisedTuningDatasetDistribution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SupervisedTuningDatasetDistribution.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SupervisedTuningDatasetDistribution",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SupervisedTuningDatasetDistribution.yml\" sourcestartlinenumber=\"1\">Dataset distribution for Supervised Tuning. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SupervisedTuningDatasetDistributionDatasetBucket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SupervisedTuningDatasetDistributionDatasetBucket.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SupervisedTuningDatasetDistributionDatasetBucket",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SupervisedTuningDatasetDistributionDatasetBucket.yml\" sourcestartlinenumber=\"1\">Dataset bucket used to create a histogram for the distribution given a population of values.\nThis data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SupervisedTuningSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SupervisedTuningSpec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SupervisedTuningSpec",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SupervisedTuningSpec.yml\" sourcestartlinenumber=\"1\">Supervised tuning spec for tuning.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TestTableFile.yml",
       "output": {
         ".html": {
@@ -3038,6 +3850,174 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TunedModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TunedModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TunedModel",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TunedModel.yml\" sourcestartlinenumber=\"1\">TunedModel for the Tuned Model of a Tuning Job.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TunedModelCheckpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TunedModelCheckpoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TunedModelCheckpoint",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TunedModelCheckpoint.yml\" sourcestartlinenumber=\"1\">TunedModelCheckpoint for the Tuned Model of a Tuning Job.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TunedModelInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TunedModelInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TunedModelInfo",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TunedModelInfo.yml\" sourcestartlinenumber=\"1\">A tuned machine learning model.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningDataStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningDataStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningDataStats",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningDataStats.yml\" sourcestartlinenumber=\"1\">The tuning data statistic values for TuningJob. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningDataset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningDataset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningDataset",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningDataset.yml\" sourcestartlinenumber=\"1\">Supervised fine-tuning training dataset.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningExample.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningExample.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningExample",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningExample.yml\" sourcestartlinenumber=\"1\">A single example for tuning. This data type is not supported in Vertex AI.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningJob.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningJob",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningJob.yml\" sourcestartlinenumber=\"1\">A tuning job.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningMethod",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningMethod.yml\" sourcestartlinenumber=\"1\">Enum representing the tuning method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningMode",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningMode.yml\" sourcestartlinenumber=\"1\">Tuning mode. This enum is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningOperation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningOperation",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningOperation.yml\" sourcestartlinenumber=\"1\">A long-running operation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningTask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningTask",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningTask.yml\" sourcestartlinenumber=\"1\">The tuning task. Either I2V or T2V. This enum is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningValidationDataset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningValidationDataset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningValidationDataset",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TurnCompleteReason.yml",
       "output": {
         ".html": {
@@ -3077,6 +4057,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Type",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Type.yml\" sourcestartlinenumber=\"1\">The type of the data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.UpdateCachedContentConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.UpdateCachedContentConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.UpdateCachedContentConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UpdateCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for caches.update method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.UpdateModelConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.UpdateModelConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.UpdateModelConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UpdateModelConfig.yml\" sourcestartlinenumber=\"1\">Configuration for updating a tuned model.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3217,6 +4225,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.UsageMetadata",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UsageMetadata.yml\" sourcestartlinenumber=\"1\">Usage metadata about response(s).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VeoHyperParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VeoHyperParameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VeoHyperParameters",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VeoHyperParameters.yml\" sourcestartlinenumber=\"1\">Hyperparameters for Veo. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VeoTuningSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VeoTuningSpec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VeoTuningSpec",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VeoTuningSpec.yml\" sourcestartlinenumber=\"1\">Tuning Spec for Veo Model Tuning. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
