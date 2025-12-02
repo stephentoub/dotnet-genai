@@ -1113,6 +1113,25 @@ public class ContinuousTuningJob {
 }
 ```
 
+### Cancel Tuning Job
+
+```csharp
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class CancelTuningJobExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    // The tuning job resource name to cancel, retrieved from a created tuning job.
+    var tuningJobResourceName = "tuningJobs/your-tuning-job";
+    await client.Tunings.CancelAsync(tuningJobResourceName);
+  }
+}
+```
+
 ### List Tuning Jobs
 ```csharp
 using System.Threading.Tasks;
