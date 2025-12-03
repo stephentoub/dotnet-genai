@@ -21,70 +21,53 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-using System.IO;
-
 namespace Google.GenAI.Types {
   /// <summary>
-  /// An image.
+  /// Status of a File that uses a common error model.
   /// </summary>
 
-  public record Image {
+  public record FileStatus {
     /// <summary>
-    /// The Cloud Storage URI of the image. ``Image`` can contain a value for this field or the
-    /// ``image_bytes`` field but not both.
+    /// A list of messages that carry the error details. There is a common set of message types for
+    /// APIs to use.
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("details")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public List<Dictionary<string, object>> ? Details { get; set; }
 
     /// <summary>
-    /// The image bytes data. ``Image`` can contain a value for this field or the ``gcs_uri`` field
-    /// but not both.
+    /// A list of messages that carry the error details. There is a common set of message types for
+    /// APIs to use.
     /// </summary>
-    [JsonPropertyName("imageBytes")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[]
-        ? ImageBytes {
-            get; set;
-          }
-
-    /// <summary>
-    /// The MIME type of the image.
-    /// </summary>
-    [JsonPropertyName("mimeType")]
+    [JsonPropertyName("message")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? MimeType {
+        ? Message {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a Image object.
+    /// The status code. 0 for OK, 1 for CANCELLED
+    /// </summary>
+    [JsonPropertyName("code")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? Code {
+            get; set;
+          }
+
+    /// <summary>
+    /// Deserializes a JSON string to a FileStatus object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized Image object, or null if deserialization fails.</returns>
-    public static Image ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized FileStatus object, or null if deserialization fails.</returns>
+    public static FileStatus ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<Image>(jsonString, options);
+        return JsonSerializer.Deserialize<FileStatus>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
-      }
-    }
-
-    public static Image FromFile(string location, string? mimeType = null) {
-      if (mimeType == null && MimeTypes.TryGetMimeType(location, out var mimeTypeInferred)) {
-        mimeType = mimeTypeInferred;
-      }
-
-      try {
-        return new Image {
-          ImageBytes = System.IO.File.ReadAllBytes(location),
-          MimeType = mimeType,
-        };
-      } catch (IOException e) {
-        throw new IOException($"Failed to read image from file: {location}", e);
       }
     }
   }

@@ -515,9 +515,32 @@ namespace Google.GenAI
       {
         return null;
       }
+      else if (origin is JsonNode jsonNode)
+      {
+        name = jsonNode.ToString();
+        name = name.Replace("\"", "");
+      }
       else
       {
         throw new ArgumentException($"Unsupported file name type: {origin.GetType()}");
+      }
+
+      if (name.StartsWith("https://"))
+      {
+        string suffix = name.Split("files/")[1];
+        Match match = Regex.Match(suffix, "[a-z0-9]+");
+        if (match.Success)
+        {
+          name = match.Value;
+        }
+        else
+        {
+          throw new ArgumentException($"Could not extract file name from {name}");
+        }
+      }
+      else if (name.StartsWith("files/"))
+      {
+        name = name.Split("files/")[1];
       }
 
       return name;

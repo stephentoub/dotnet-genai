@@ -1368,3 +1368,95 @@ public class ListTuningJobs {
     }
 }
 ```
+
+## Files (Gemini API only)
+
+The Files feature are only supported for the Gemini API.
+
+### Upload File
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class Files {
+  public static async Task Main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: false);
+
+    // uploading from local file path
+    var uploadResponse1 = await client.Files.UploadAsync(filtePath: "path/to/your/file.png");
+    Console.WriteLine($"Gemini API Files Upload Response: {uploadResponse1}");
+
+    // uploading from bytes
+    // using this fileBytes variable for demo purpose only
+    byte[] fileBytes = await System.IO.File.ReadAllBytesAsync("path/to/your/file.png");
+    var uploadResponse2 = await geminiClient.Files.UploadAsync(
+          bytes: fileBytes,
+          fileName: "file.png"
+      );
+      Console.WriteLine($"Gemini API Files Upload Response: {uploadResponse2}");
+  }
+}
+```
+
+### Get File
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class Files {
+  public static async Task Main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: false);
+
+    // usually, pattern is similar to this example "files/s0pa54alni6w"
+    string fileName = "files/randomID";
+    var getResponse = await client.Files.GetAsync(name: fileName);
+    Console.WriteLine($"Gemini API Files Get Response: {getResponse}");
+
+  }
+}
+```
+
+### Delete File
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class Files {
+  public static async Task Main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: false);
+
+    // usually, pattern is similar to this example "files/s0pa54alni6w"
+    string fileName = "files/randomID";
+    var deleteResponse = await client.Files.DeleteAsync(name: fileName);
+    Console.WriteLine($"Gemini API Files Delete Response: {deleteResponse}");
+
+  }
+}
+```
+
+### List File
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class Files {
+  public static async Task Main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: false);
+
+    var pager = await client.Files.ListAsync();
+    await foreach(var page in pager) {
+      Console.WriteLine($"Gemini API Files List Response page: {page}");
+    }
+
+  }
+}
+
+```

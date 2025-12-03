@@ -21,70 +21,53 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-using System.IO;
-
 namespace Google.GenAI.Types {
   /// <summary>
-  /// An image.
+  /// Used to override the default configuration.
   /// </summary>
 
-  public record Image {
+  public record ListFilesConfig {
     /// <summary>
-    /// The Cloud Storage URI of the image. ``Image`` can contain a value for this field or the
-    /// ``image_bytes`` field but not both.
+    /// Used to override HTTP request options.
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("httpOptions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public HttpOptions ? HttpOptions { get; set; }
 
     /// <summary>
-    /// The image bytes data. ``Image`` can contain a value for this field or the ``gcs_uri`` field
-    /// but not both.
+    ///
     /// </summary>
-    [JsonPropertyName("imageBytes")]
+    [JsonPropertyName("pageSize")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[]
-        ? ImageBytes {
+    public int
+        ? PageSize {
             get; set;
           }
 
     /// <summary>
-    /// The MIME type of the image.
+    ///
     /// </summary>
-    [JsonPropertyName("mimeType")]
+    [JsonPropertyName("pageToken")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? MimeType {
+        ? PageToken {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a Image object.
+    /// Deserializes a JSON string to a ListFilesConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized Image object, or null if deserialization fails.</returns>
-    public static Image ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized ListFilesConfig object, or null if deserialization
+    /// fails.</returns>
+    public static ListFilesConfig
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<Image>(jsonString, options);
+        return JsonSerializer.Deserialize<ListFilesConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
-      }
-    }
-
-    public static Image FromFile(string location, string? mimeType = null) {
-      if (mimeType == null && MimeTypes.TryGetMimeType(location, out var mimeTypeInferred)) {
-        mimeType = mimeTypeInferred;
-      }
-
-      try {
-        return new Image {
-          ImageBytes = System.IO.File.ReadAllBytes(location),
-          MimeType = mimeType,
-        };
-      } catch (IOException e) {
-        throw new IOException($"Failed to read image from file: {location}", e);
       }
     }
   }
