@@ -618,6 +618,55 @@ public class GenerateVideosFromVideo {
 }
 ```
 
+### Edit Video
+Editing a video is only available on Vertex
+
+```csharp
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class EditVideoOutpaint {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var source = new GenerateVideosSource {
+      Prompt = "A mountain landscape",
+      Video = new Video {
+        Uri = "gs://bucket/inputs/editing_demo.mp4",
+        MimeType = "video/mp4",
+      },
+    };
+
+    var config = new GenerateVideosConfig {
+      OutputGcsUri = outputGcsUri,
+      AspectRatio = "16:9",
+      Mask = new VideoGenerationMask {
+        Image = new Image {
+          GcsUri = "gs://bucket/inputs/video_outpaint_mask.png",
+          MimeType = "image/png",
+        },
+        MaskMode = VideoGenerationMaskMode.OUTPAINT,
+      },
+    };
+    var operation = await vertexClient.Models.GenerateVideosAsync(
+        model: "veo-2.0-generate-exp", source: source, config: config);
+
+    while (operation.Done != true) {
+      try {
+        await Task.Delay(10000);
+        operation = await vertexClient.Operations.GetAsync(operation, null);
+      } catch (TaskCanceledException) {
+        System.Console.WriteLine("Task was cancelled while waiting.");
+        break;
+      }
+    }
+    var video = operation.Response.GeneratedVideos.First().Video;
+  }
+}
+```
+
 ### Count Tokens
 
 ```csharp

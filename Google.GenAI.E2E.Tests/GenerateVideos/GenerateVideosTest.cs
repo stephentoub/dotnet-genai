@@ -501,4 +501,76 @@ public class GenerateVideosTest {
     Assert.IsNotNull(operation.Response.GeneratedVideos.First().Video.Uri);
   }
 
+  [TestMethod]
+  public async Task GenerateVideosEditOutpaintVertexTest() {
+    // TODO(b/464055665): resolve test failure (temporarily skipped) in replay mode
+    if (TestServer.IsReplayMode) {
+        Assert.Inconclusive("Vertex generate videos tests run in record mode only.");
+    }
+
+    var source = new GenerateVideosSource {
+      Prompt = "A mountain landscape",
+      Video = new Video {
+        Uri = "gs://genai-sdk-tests/inputs/videos/editing_demo.mp4",
+        MimeType = "video/mp4",
+      },
+    };
+
+    var config = new GenerateVideosConfig {
+      OutputGcsUri = outputGcsUri,
+      AspectRatio = "16:9",
+      Mask = new VideoGenerationMask {
+        Image = new Image {
+          GcsUri = "gs://genai-sdk-tests/inputs/videos/video_outpaint_mask.png",
+          MimeType = "image/png",
+        },
+        MaskMode = VideoGenerationMaskMode.OUTPAINT,
+      },
+    };
+    var operation = await vertexClient.Models.GenerateVideosAsync(
+        model: "veo-2.0-generate-exp", source: source, config: config);
+
+    Assert.IsNotNull(operation.Name);
+    while (operation.Done != true) {
+      try {
+        if (!TestServer.IsReplayMode) {
+          await Task.Delay(10000);
+        }
+        operation = await vertexClient.Operations.GetAsync(operation, null);
+      } catch (TaskCanceledException) {
+        System.Console.WriteLine("Task was cancelled while waiting.");
+        break;
+      }
+    }
+    Assert.IsTrue(operation.Done);
+    Assert.IsTrue(operation.Response.GeneratedVideos.Count > 0);
+    Assert.IsNotNull(operation.Response.GeneratedVideos.First().Video.Uri);
+  }
+
+  [TestMethod]
+  public async Task GenerateVideosEditOutpaintGeminiNotSupportedTest() {
+    var source = new GenerateVideosSource {
+      Prompt = "A mountain landscape",
+      Video = new Video {
+        VideoBytes = new byte[100],
+        MimeType = "video/mp4",
+      },
+    };
+
+    var config = new GenerateVideosConfig {
+      AspectRatio = "16:9",
+      Mask = new VideoGenerationMask {
+        Image = Image.FromFile("TestAssets/google_small.png"),
+        MaskMode = VideoGenerationMaskMode.OUTPAINT,
+      },
+    };
+
+    var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () => {
+      await geminiClient.Models.GenerateVideosAsync(
+          model: "veo-2.0-generate-exp", source: source, config: config);
+    });
+
+    Assert.AreEqual(ex.Message, "mask parameter is not supported in Gemini API.");
+  }
+
 }
