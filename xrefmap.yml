@@ -964,6 +964,24 @@ references:
   fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File, Google.GenAI.Types.DownloadFileConfig)
   nameWithType: Files.DownloadAsync(File, DownloadFileConfig?)
   nameWithType.vb: Files.DownloadAsync(File, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo,Google.GenAI.Types.DownloadFileConfig)
+  name: DownloadAsync(GeneratedVideo, DownloadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_GeneratedVideo_Google_GenAI_Types_DownloadFileConfig_
+  commentId: M:Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo,Google.GenAI.Types.DownloadFileConfig)
+  name.vb: DownloadAsync(GeneratedVideo, DownloadFileConfig)
+  fullName: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo, Google.GenAI.Types.DownloadFileConfig?)
+  fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo, Google.GenAI.Types.DownloadFileConfig)
+  nameWithType: Files.DownloadAsync(GeneratedVideo, DownloadFileConfig?)
+  nameWithType.vb: Files.DownloadAsync(GeneratedVideo, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video,Google.GenAI.Types.DownloadFileConfig)
+  name: DownloadAsync(Video, DownloadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_Video_Google_GenAI_Types_DownloadFileConfig_
+  commentId: M:Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video,Google.GenAI.Types.DownloadFileConfig)
+  name.vb: DownloadAsync(Video, DownloadFileConfig)
+  fullName: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video, Google.GenAI.Types.DownloadFileConfig?)
+  fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video, Google.GenAI.Types.DownloadFileConfig)
+  nameWithType: Files.DownloadAsync(Video, DownloadFileConfig?)
+  nameWithType.vb: Files.DownloadAsync(Video, DownloadFileConfig)
 - uid: Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig)
   name: DownloadAsync(string, DownloadFileConfig?)
   href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_System_String_Google_GenAI_Types_DownloadFileConfig_
@@ -989,6 +1007,24 @@ references:
   fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File, String, Google.GenAI.Types.DownloadFileConfig)
   nameWithType: Files.DownloadToFileAsync(File, string, DownloadFileConfig?)
   nameWithType.vb: Files.DownloadToFileAsync(File, String, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo,System.String,Google.GenAI.Types.DownloadFileConfig)
+  name: DownloadToFileAsync(GeneratedVideo, string, DownloadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_GeneratedVideo_System_String_Google_GenAI_Types_DownloadFileConfig_
+  commentId: M:Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo,System.String,Google.GenAI.Types.DownloadFileConfig)
+  name.vb: DownloadToFileAsync(GeneratedVideo, String, DownloadFileConfig)
+  fullName: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo, string, Google.GenAI.Types.DownloadFileConfig?)
+  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo, String, Google.GenAI.Types.DownloadFileConfig)
+  nameWithType: Files.DownloadToFileAsync(GeneratedVideo, string, DownloadFileConfig?)
+  nameWithType.vb: Files.DownloadToFileAsync(GeneratedVideo, String, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video,System.String,Google.GenAI.Types.DownloadFileConfig)
+  name: DownloadToFileAsync(Video, string, DownloadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_Video_System_String_Google_GenAI_Types_DownloadFileConfig_
+  commentId: M:Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video,System.String,Google.GenAI.Types.DownloadFileConfig)
+  name.vb: DownloadToFileAsync(Video, String, DownloadFileConfig)
+  fullName: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video, string, Google.GenAI.Types.DownloadFileConfig?)
+  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video, String, Google.GenAI.Types.DownloadFileConfig)
+  nameWithType: Files.DownloadToFileAsync(Video, string, DownloadFileConfig?)
+  nameWithType.vb: Files.DownloadToFileAsync(Video, String, DownloadFileConfig)
 - uid: Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig)
   name: DownloadToFileAsync(string, string, DownloadFileConfig?)
   href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_System_String_System_String_Google_GenAI_Types_DownloadFileConfig_
@@ -7640,12 +7676,24 @@ references:
   commentId: F:Google.GenAI.Types.FinishReason.FINISH_REASON_UNSPECIFIED
   fullName: Google.GenAI.Types.FinishReason.FINISH_REASON_UNSPECIFIED
   nameWithType: FinishReason.FINISH_REASON_UNSPECIFIED
+- uid: Google.GenAI.Types.FinishReason.IMAGE_OTHER
+  name: IMAGE_OTHER
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_IMAGE_OTHER
+  commentId: F:Google.GenAI.Types.FinishReason.IMAGE_OTHER
+  fullName: Google.GenAI.Types.FinishReason.IMAGE_OTHER
+  nameWithType: FinishReason.IMAGE_OTHER
 - uid: Google.GenAI.Types.FinishReason.IMAGE_PROHIBITED_CONTENT
   name: IMAGE_PROHIBITED_CONTENT
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_IMAGE_PROHIBITED_CONTENT
   commentId: F:Google.GenAI.Types.FinishReason.IMAGE_PROHIBITED_CONTENT
   fullName: Google.GenAI.Types.FinishReason.IMAGE_PROHIBITED_CONTENT
   nameWithType: FinishReason.IMAGE_PROHIBITED_CONTENT
+- uid: Google.GenAI.Types.FinishReason.IMAGE_RECITATION
+  name: IMAGE_RECITATION
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_IMAGE_RECITATION
+  commentId: F:Google.GenAI.Types.FinishReason.IMAGE_RECITATION
+  fullName: Google.GenAI.Types.FinishReason.IMAGE_RECITATION
+  nameWithType: FinishReason.IMAGE_RECITATION
 - uid: Google.GenAI.Types.FinishReason.IMAGE_SAFETY
   name: IMAGE_SAFETY
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_IMAGE_SAFETY
@@ -8456,6 +8504,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.CandidateCount
   nameWithType: GenerateContentConfig.CandidateCount
+- uid: Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  name: EnableEnhancedCivicAnswers
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_EnableEnhancedCivicAnswers
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  fullName: Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  nameWithType: GenerateContentConfig.EnableEnhancedCivicAnswers
+- uid: Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers*
+  name: EnableEnhancedCivicAnswers
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_EnableEnhancedCivicAnswers_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  nameWithType: GenerateContentConfig.EnableEnhancedCivicAnswers
 - uid: Google.GenAI.Types.GenerateContentConfig.FrequencyPenalty
   name: FrequencyPenalty
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_FrequencyPenalty
@@ -13814,6 +13875,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveClientSetup.ContextWindowCompression
   nameWithType: LiveClientSetup.ContextWindowCompression
+- uid: Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  name: ExplicitVadSignal
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_ExplicitVadSignal
+  commentId: P:Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  fullName: Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  nameWithType: LiveClientSetup.ExplicitVadSignal
+- uid: Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal*
+  name: ExplicitVadSignal
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_ExplicitVadSignal_
+  commentId: Overload:Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  nameWithType: LiveClientSetup.ExplicitVadSignal
 - uid: Google.GenAI.Types.LiveClientSetup.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -14014,6 +14088,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveConnectConfig.EnableAffectiveDialog
   nameWithType: LiveConnectConfig.EnableAffectiveDialog
+- uid: Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  name: ExplicitVadSignal
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_ExplicitVadSignal
+  commentId: P:Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  fullName: Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  nameWithType: LiveConnectConfig.ExplicitVadSignal
+- uid: Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal*
+  name: ExplicitVadSignal
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_ExplicitVadSignal_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  nameWithType: LiveConnectConfig.ExplicitVadSignal
 - uid: Google.GenAI.Types.LiveConnectConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -14821,6 +14908,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveServerMessage.UsageMetadata
   nameWithType: LiveServerMessage.UsageMetadata
+- uid: Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  name: VoiceActivityDetectionSignal
+  href: api/Google.GenAI.Types.LiveServerMessage.html#Google_GenAI_Types_LiveServerMessage_VoiceActivityDetectionSignal
+  commentId: P:Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  fullName: Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  nameWithType: LiveServerMessage.VoiceActivityDetectionSignal
+- uid: Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal*
+  name: VoiceActivityDetectionSignal
+  href: api/Google.GenAI.Types.LiveServerMessage.html#Google_GenAI_Types_LiveServerMessage_VoiceActivityDetectionSignal_
+  commentId: Overload:Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  nameWithType: LiveServerMessage.VoiceActivityDetectionSignal
 - uid: Google.GenAI.Types.LiveServerSessionResumptionUpdate
   name: LiveServerSessionResumptionUpdate
   href: api/Google.GenAI.Types.LiveServerSessionResumptionUpdate.html
@@ -17848,6 +17948,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReplayResponse.StatusCode
   nameWithType: ReplayResponse.StatusCode
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig
+  name: ReplicatedVoiceConfig
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html
+  commentId: T:Google.GenAI.Types.ReplicatedVoiceConfig
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig
+  nameWithType: ReplicatedVoiceConfig
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ReplicatedVoiceConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ReplicatedVoiceConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson
+  nameWithType: ReplicatedVoiceConfig.FromJson
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  name: MimeType
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_MimeType
+  commentId: P:Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  nameWithType: ReplicatedVoiceConfig.MimeType
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType*
+  name: MimeType
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_MimeType_
+  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  nameWithType: ReplicatedVoiceConfig.MimeType
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  name: VoiceSampleAudio
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_VoiceSampleAudio
+  commentId: P:Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  nameWithType: ReplicatedVoiceConfig.VoiceSampleAudio
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio*
+  name: VoiceSampleAudio
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_VoiceSampleAudio_
+  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  nameWithType: ReplicatedVoiceConfig.VoiceSampleAudio
 - uid: Google.GenAI.Types.Retrieval
   name: Retrieval
   href: api/Google.GenAI.Types.Retrieval.html
@@ -22614,6 +22762,30 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.UsageMetadata.TrafficType
   nameWithType: UsageMetadata.TrafficType
+- uid: Google.GenAI.Types.VadSignalType
+  name: VadSignalType
+  href: api/Google.GenAI.Types.VadSignalType.html
+  commentId: T:Google.GenAI.Types.VadSignalType
+  fullName: Google.GenAI.Types.VadSignalType
+  nameWithType: VadSignalType
+- uid: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_EOS
+  name: VAD_SIGNAL_TYPE_EOS
+  href: api/Google.GenAI.Types.VadSignalType.html#Google_GenAI_Types_VadSignalType_VAD_SIGNAL_TYPE_EOS
+  commentId: F:Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_EOS
+  fullName: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_EOS
+  nameWithType: VadSignalType.VAD_SIGNAL_TYPE_EOS
+- uid: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_SOS
+  name: VAD_SIGNAL_TYPE_SOS
+  href: api/Google.GenAI.Types.VadSignalType.html#Google_GenAI_Types_VadSignalType_VAD_SIGNAL_TYPE_SOS
+  commentId: F:Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_SOS
+  fullName: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_SOS
+  nameWithType: VadSignalType.VAD_SIGNAL_TYPE_SOS
+- uid: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_UNSPECIFIED
+  name: VAD_SIGNAL_TYPE_UNSPECIFIED
+  href: api/Google.GenAI.Types.VadSignalType.html#Google_GenAI_Types_VadSignalType_VAD_SIGNAL_TYPE_UNSPECIFIED
+  commentId: F:Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_UNSPECIFIED
+  fullName: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_UNSPECIFIED
+  nameWithType: VadSignalType.VAD_SIGNAL_TYPE_UNSPECIFIED
 - uid: Google.GenAI.Types.VeoHyperParameters
   name: VeoHyperParameters
   href: api/Google.GenAI.Types.VeoHyperParameters.html
@@ -23303,6 +23475,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VideoMetadata.StartOffset
   nameWithType: VideoMetadata.StartOffset
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal
+  name: VoiceActivityDetectionSignal
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html
+  commentId: T:Google.GenAI.Types.VoiceActivityDetectionSignal
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal
+  nameWithType: VoiceActivityDetectionSignal
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html#Google_GenAI_Types_VoiceActivityDetectionSignal_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VoiceActivityDetectionSignal.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: VoiceActivityDetectionSignal.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html#Google_GenAI_Types_VoiceActivityDetectionSignal_FromJson_
+  commentId: Overload:Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson
+  nameWithType: VoiceActivityDetectionSignal.FromJson
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  name: VadSignalType
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html#Google_GenAI_Types_VoiceActivityDetectionSignal_VadSignalType
+  commentId: P:Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  nameWithType: VoiceActivityDetectionSignal.VadSignalType
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType*
+  name: VadSignalType
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html#Google_GenAI_Types_VoiceActivityDetectionSignal_VadSignalType_
+  commentId: Overload:Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  nameWithType: VoiceActivityDetectionSignal.VadSignalType
 - uid: Google.GenAI.Types.VoiceConfig
   name: VoiceConfig
   href: api/Google.GenAI.Types.VoiceConfig.html
@@ -23338,3 +23545,16 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VoiceConfig.PrebuiltVoiceConfig
   nameWithType: VoiceConfig.PrebuiltVoiceConfig
+- uid: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  name: ReplicatedVoiceConfig
+  href: api/Google.GenAI.Types.VoiceConfig.html#Google_GenAI_Types_VoiceConfig_ReplicatedVoiceConfig
+  commentId: P:Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  nameWithType: VoiceConfig.ReplicatedVoiceConfig
+- uid: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig*
+  name: ReplicatedVoiceConfig
+  href: api/Google.GenAI.Types.VoiceConfig.html#Google_GenAI_Types_VoiceConfig_ReplicatedVoiceConfig_
+  commentId: Overload:Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  nameWithType: VoiceConfig.ReplicatedVoiceConfig
