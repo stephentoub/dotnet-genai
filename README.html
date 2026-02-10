@@ -74,7 +74,7 @@ Google's generative models into their .NET applications. It supports the
 <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview">Vertex AI</a>
 APIs.</p>
 <h2 id="supported-net-version">Supported .NET version</h2>
-<p>This library is built for .NET 8.0 and netstandard2.1.</p>
+<p>This library is built for net8.0 and netstandard2.0.</p>
 <h2 id="full-api-reference">Full API Reference</h2>
 <p>The full API reference is hosted in the <a href="https://googleapis.github.io/dotnet-genai/api/index.html">dedicated GitHub Page</a></p>
 <h2 id="install">Install</h2>
@@ -120,6 +120,16 @@ client = new Client();
 </code></pre>
 <h2 id="types">Types</h2>
 <p>Parameter types are specified in the <code>Google.GenAI.Types</code> namespace.</p>
+<h3 id="enums">Enums</h3>
+<p>Enums are represented using structs for forward compatibility reasons. Enum
+values follow C# naming conventions (PascalCase).</p>
+<p>The SDK enum value contains an underlying string value that is sent to the API,
+which is usually UPPER_SNAKE_CASE. Please refer to the API documentation for
+the expected enum string values if you do not use the static SDK enum values.</p>
+<p>Unknown enum values are preserved as string values, accessible through
+PersonGeneration.Value. String equality with static SDK enum values can be
+checked, but must match the underlying string value exactly
+(ex. <code>PersonGeneration.AllowAll == &quot;ALLOW_ALL&quot;</code> is true).</p>
 <h2 id="models">Models</h2>
 <p>The <code>client.Models</code> module exposes model inferencing. See <code>Create a client</code>
 section above to initialize a client.</p>
@@ -282,6 +292,35 @@ class GenerateContentStreamSimpleText {
 }
 
 </code></pre>
+<h3 id="ichatclient">IChatClient</h3>
+<p>Microsoft.Extensions.AI provides abstractions and exchange types for working with AI services. The Google.GenAI library includes an implementation of the IChatClient interface to enable
+easy integration with applications that use these abstractions.</p>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Microsoft.Extensions.AI;
+using System.ComponentModel
+
+// assuming credentials are set up in environment variables as instructed above.
+IChatClient chatClient = new Client().AsIChatClient(&quot;gemini-2.0-flash&quot;)
+    .AsBuilder()
+    .UseFunctionInvocation()
+    .UseOpenTelemetry()
+    .Build();
+
+ChatOptions options = new()
+{
+    Tools = [AIFunctionFactory.Create(([Description(&quot;The name of the person whose age is to be retrieved&quot;)] string personName) =&gt; personName switch
+    {
+        &quot;Alice&quot; =&gt; 30,
+        &quot;Bob&quot; =&gt; 25,
+        _ =&gt; 35
+    }, &quot;get_person_age&quot;, &quot;Gets the age of the specified person&quot;);
+};
+
+await foreach (var update in chatClient.GetStreamingResponseAsync(&quot;How much older is Alice than Bob?&quot;, options))
+{
+    Console.Write(update);
+}
+</code></pre>
 <h3 id="generate-images">Generate Images</h3>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;
@@ -302,7 +341,7 @@ public class GenerateImagesSimple {
       OutputMimeType = &quot;image/jpeg&quot;,
     };
     var response = await client.Models.GenerateImagesAsync(
-      model: &quot;imagen-3.0-generate-002&quot;,
+      model: &quot;imagen-4.0-generate-001&quot;,
       prompt: &quot;Red skateboard&quot;,
       config: generateImagesConfig
     );
@@ -1294,6 +1333,36 @@ public class ContinuousTuningJob {
     var tuningJob = await client.Tunings.TuneAsync(
       baseModel: tunedModelResourceName,
       trainingDataset: trainingDataset,
+    );
+    Console.WriteLine(tuningJob.State);
+  }
+}
+</code></pre>
+<h4 id="distillation">Distillation</h4>
+<p>You can perform distillation by setting <code>Method</code> to <code>TuningMethod.DISTILLATION</code> in <code>CreateTuningJobConfig</code>.</p>
+<pre><code class="lang-csharp">using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class DistillationJob {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: true);
+
+    // Prompt dataset
+    var trainingDataset = new TuningDataset {
+      GcsUri = &quot;gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl&quot;
+    };
+
+    var config = new CreateTuningJobConfig {
+      Method = TuningMethod.DISTILLATION,
+      BaseTeacherModel = &quot;teacher-model-id&quot;,
+      EpochCount = 1,
+    };
+    var tuningJob = await client.Tunings.TuneAsync(
+      baseModel: &quot;student-model-id&quot;,
+      trainingDataset: trainingDataset,
+      config: config,
     );
     Console.WriteLine(tuningJob.State);
   }
