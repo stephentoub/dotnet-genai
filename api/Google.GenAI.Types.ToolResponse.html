@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class ToolConfig | Google GenAI .NET SDK </title>
+      <title>Class ToolResponse | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ToolConfig | Google GenAI .NET SDK ">
+      <meta name="title" content="Class ToolResponse | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Tool config.  This config is shared for all tools provided in the request.">
+      <meta name="description" content="The output from a server-side ToolCall execution.  This message contains the results of a tool invocation that was initiated by a ToolCall from the model. The client should pass this ToolResponse back to the API in a subsequent turn within a Content message, along with the corresponding ToolCall.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/stephentoub/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_ToolConfig.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.ToolConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/stephentoub/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_ToolResponse.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.ToolResponse%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,12 +80,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Google.GenAI.Types.ToolConfig">
+        <article data-uid="Google.GenAI.Types.ToolResponse">
 
 
 
-  <h1 id="Google_GenAI_Types_ToolConfig" data-uid="Google.GenAI.Types.ToolConfig" class="text-break">
-Class ToolConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Google_GenAI_Types_ToolResponse" data-uid="Google.GenAI.Types.ToolResponse" class="text-break">
+Class ToolResponse  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolResponse.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,12 +93,15 @@ Class ToolConfig  <a class="header-action link-secondary" title="View source" hr
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Tool config.  This config is shared for all tools provided in the request.</p>
+  <div class="markdown summary"><p>The output from a server-side <code>ToolCall</code> execution.  This message contains the results of a
+tool invocation that was initiated by a <code>ToolCall</code> from the model. The client should pass this
+<code>ToolResponse</code> back to the API in a subsequent turn within a <code>Content</code> message, along with the
+corresponding <code>ToolCall</code>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record ToolConfig : IEquatable&lt;ToolConfig&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public record ToolResponse : IEquatable&lt;ToolResponse&gt;</code></pre>
   </div>
 
 
@@ -108,14 +111,14 @@ Class ToolConfig  <a class="header-action link-secondary" title="View source" hr
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">ToolConfig</span></div>
+      <div><span class="xref">ToolResponse</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.ToolConfig.html">ToolConfig</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.ToolResponse.html">ToolResponse</a>&gt;</div>
     </dd>
   </dl>
 
@@ -155,21 +158,21 @@ Class ToolConfig  <a class="header-action link-secondary" title="View source" hr
 </h2>
 
 
-  <a id="Google_GenAI_Types_ToolConfig_FunctionCallingConfig_" data-uid="Google.GenAI.Types.ToolConfig.FunctionCallingConfig*"></a>
+  <a id="Google_GenAI_Types_ToolResponse_Id_" data-uid="Google.GenAI.Types.ToolResponse.Id*"></a>
 
-  <h3 id="Google_GenAI_Types_ToolConfig_FunctionCallingConfig" data-uid="Google.GenAI.Types.ToolConfig.FunctionCallingConfig">
-  FunctionCallingConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolConfig.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_ToolResponse_Id" data-uid="Google.GenAI.Types.ToolResponse.Id">
+  Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolResponse.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Function calling config.</p>
+  <div class="markdown level1 summary"><p>The identifier of the tool call this response is for.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;functionCallingConfig&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;id&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public FunctionCallingConfig? FunctionCallingConfig { get; set; }</code></pre>
+public string? Id { get; set; }</code></pre>
   </div>
 
 
@@ -178,7 +181,7 @@ public FunctionCallingConfig? FunctionCallingConfig { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.FunctionCallingConfig.html">FunctionCallingConfig</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -189,22 +192,21 @@ public FunctionCallingConfig? FunctionCallingConfig { get; set; }</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_ToolConfig_IncludeServerSideToolInvocations_" data-uid="Google.GenAI.Types.ToolConfig.IncludeServerSideToolInvocations*"></a>
+  <a id="Google_GenAI_Types_ToolResponse_Response_" data-uid="Google.GenAI.Types.ToolResponse.Response*"></a>
 
-  <h3 id="Google_GenAI_Types_ToolConfig_IncludeServerSideToolInvocations" data-uid="Google.GenAI.Types.ToolConfig.IncludeServerSideToolInvocations">
-  IncludeServerSideToolInvocations
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_ToolResponse_Response" data-uid="Google.GenAI.Types.ToolResponse.Response">
+  Response
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolResponse.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>If true, the API response will include the server-side tool calls and responses within the
-<code>Content</code> message. This allows clients to observe the server's tool invocations.</p>
+  <div class="markdown level1 summary"><p>The tool response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;includeServerSideToolInvocations&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;response&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public bool? IncludeServerSideToolInvocations { get; set; }</code></pre>
+public Dictionary&lt;string, object&gt;? Response { get; set; }</code></pre>
   </div>
 
 
@@ -213,7 +215,7 @@ public bool? IncludeServerSideToolInvocations { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -224,21 +226,21 @@ public bool? IncludeServerSideToolInvocations { get; set; }</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_ToolConfig_RetrievalConfig_" data-uid="Google.GenAI.Types.ToolConfig.RetrievalConfig*"></a>
+  <a id="Google_GenAI_Types_ToolResponse_ToolType_" data-uid="Google.GenAI.Types.ToolResponse.ToolType*"></a>
 
-  <h3 id="Google_GenAI_Types_ToolConfig_RetrievalConfig" data-uid="Google.GenAI.Types.ToolConfig.RetrievalConfig">
-  RetrievalConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_ToolResponse_ToolType" data-uid="Google.GenAI.Types.ToolResponse.ToolType">
+  ToolType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolResponse.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Retrieval config.</p>
+  <div class="markdown level1 summary"><p>The type of tool that was called, matching the tool_type in the corresponding ToolCall.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;retrievalConfig&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;toolType&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public RetrievalConfig? RetrievalConfig { get; set; }</code></pre>
+public ToolType? ToolType { get; set; }</code></pre>
   </div>
 
 
@@ -247,7 +249,7 @@ public RetrievalConfig? RetrievalConfig { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.RetrievalConfig.html">RetrievalConfig</a></dt>
+    <dt><a class="xref" href="Google.GenAI.Types.ToolType.html">ToolType</a>?</dt>
     <dd></dd>
   </dl>
 
@@ -262,19 +264,19 @@ public RetrievalConfig? RetrievalConfig { get; set; }</code></pre>
 </h2>
 
 
-  <a id="Google_GenAI_Types_ToolConfig_FromJson_" data-uid="Google.GenAI.Types.ToolConfig.FromJson*"></a>
+  <a id="Google_GenAI_Types_ToolResponse_FromJson_" data-uid="Google.GenAI.Types.ToolResponse.FromJson*"></a>
 
-  <h3 id="Google_GenAI_Types_ToolConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ToolConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
+  <h3 id="Google_GenAI_Types_ToolResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ToolResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolConfig.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolResponse.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserializes a JSON string to a ToolConfig object.</p>
+  <div class="markdown level1 summary"><p>Deserializes a JSON string to a ToolResponse object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ToolConfig? FromJson(string jsonString, JsonSerializerOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ToolResponse? FromJson(string jsonString, JsonSerializerOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -289,8 +291,8 @@ public RetrievalConfig? RetrievalConfig { get; set; }</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.ToolConfig.html">ToolConfig</a></dt>
-    <dd><p>The deserialized ToolConfig object, or null if deserialization fails.</p>
+    <dt><a class="xref" href="Google.GenAI.Types.ToolResponse.html">ToolResponse</a></dt>
+    <dd><p>The deserialized ToolResponse object, or null if deserialization fails.</p>
 </dd>
   </dl>
 
@@ -308,7 +310,7 @@ public RetrievalConfig? RetrievalConfig { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolConfig.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/ToolResponse.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 
