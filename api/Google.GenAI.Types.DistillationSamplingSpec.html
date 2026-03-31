@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class EvaluateDatasetRun | Google GenAI .NET SDK </title>
+      <title>Class DistillationSamplingSpec | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class EvaluateDatasetRun | Google GenAI .NET SDK ">
+      <meta name="title" content="Class DistillationSamplingSpec | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Evaluate Dataset Run Result for Tuning Job. This data type is not supported in Gemini API.">
+      <meta name="description" content="Spec for creating a distilled dataset in Vertex Dataset. This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/stephentoub/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_EvaluateDatasetRun.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.EvaluateDatasetRun%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/stephentoub/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_DistillationSamplingSpec.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.DistillationSamplingSpec%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,12 +80,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Google.GenAI.Types.EvaluateDatasetRun">
+        <article data-uid="Google.GenAI.Types.DistillationSamplingSpec">
 
 
 
-  <h1 id="Google_GenAI_Types_EvaluateDatasetRun" data-uid="Google.GenAI.Types.EvaluateDatasetRun" class="text-break">
-Class EvaluateDatasetRun  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/EvaluateDatasetRun.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Google_GenAI_Types_DistillationSamplingSpec" data-uid="Google.GenAI.Types.DistillationSamplingSpec" class="text-break">
+Class DistillationSamplingSpec  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,12 +93,13 @@ Class EvaluateDatasetRun  <a class="header-action link-secondary" title="View so
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Evaluate Dataset Run Result for Tuning Job. This data type is not supported in Gemini API.</p>
+  <div class="markdown summary"><p>Spec for creating a distilled dataset in Vertex Dataset. This data type is not supported in
+Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record EvaluateDatasetRun : IEquatable&lt;EvaluateDatasetRun&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public record DistillationSamplingSpec : IEquatable&lt;DistillationSamplingSpec&gt;</code></pre>
   </div>
 
 
@@ -108,14 +109,14 @@ Class EvaluateDatasetRun  <a class="header-action link-secondary" title="View so
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">EvaluateDatasetRun</span></div>
+      <div><span class="xref">DistillationSamplingSpec</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.EvaluateDatasetRun.html">EvaluateDatasetRun</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.DistillationSamplingSpec.html">DistillationSamplingSpec</a>&gt;</div>
     </dd>
   </dl>
 
@@ -155,22 +156,22 @@ Class EvaluateDatasetRun  <a class="header-action link-secondary" title="View so
 </h2>
 
 
-  <a id="Google_GenAI_Types_EvaluateDatasetRun_CheckpointId_" data-uid="Google.GenAI.Types.EvaluateDatasetRun.CheckpointId*"></a>
+  <a id="Google_GenAI_Types_DistillationSamplingSpec_BaseTeacherModel_" data-uid="Google.GenAI.Types.DistillationSamplingSpec.BaseTeacherModel*"></a>
 
-  <h3 id="Google_GenAI_Types_EvaluateDatasetRun_CheckpointId" data-uid="Google.GenAI.Types.EvaluateDatasetRun.CheckpointId">
-  CheckpointId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/EvaluateDatasetRun.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_DistillationSamplingSpec_BaseTeacherModel" data-uid="Google.GenAI.Types.DistillationSamplingSpec.BaseTeacherModel">
+  BaseTeacherModel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. The checkpoint id used in the evaluation run. Only populated when evaluating
-checkpoints.</p>
+  <div class="markdown level1 summary"><p>Optional. The base teacher model that is being distilled. See Supported models
+(<a href="https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/tuning#supported_models">https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/tuning#supported_models</a>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;checkpointId&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;baseTeacherModel&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public string? CheckpointId { get; set; }</code></pre>
+public string? BaseTeacherModel { get; set; }</code></pre>
   </div>
 
 
@@ -190,90 +191,22 @@ public string? CheckpointId { get; set; }</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_EvaluateDatasetRun_Error_" data-uid="Google.GenAI.Types.EvaluateDatasetRun.Error*"></a>
+  <a id="Google_GenAI_Types_DistillationSamplingSpec_TunedTeacherModelSource_" data-uid="Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource*"></a>
 
-  <h3 id="Google_GenAI_Types_EvaluateDatasetRun_Error" data-uid="Google.GenAI.Types.EvaluateDatasetRun.Error">
-  Error
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/EvaluateDatasetRun.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_DistillationSamplingSpec_TunedTeacherModelSource" data-uid="Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource">
+  TunedTeacherModelSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. The error of the evaluation run if any.</p>
+  <div class="markdown level1 summary"><p>Optional. The resource name of the Tuned teacher model. Format:
+<code>projects/{project}/locations/{location}/models/{model}</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;error&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;tunedTeacherModelSource&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public GoogleRpcStatus? Error { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.GoogleRpcStatus.html">GoogleRpcStatus</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_Types_EvaluateDatasetRun_EvaluateDatasetResponse_" data-uid="Google.GenAI.Types.EvaluateDatasetRun.EvaluateDatasetResponse*"></a>
-
-  <h3 id="Google_GenAI_Types_EvaluateDatasetRun_EvaluateDatasetResponse" data-uid="Google.GenAI.Types.EvaluateDatasetRun.EvaluateDatasetResponse">
-  EvaluateDatasetResponse
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/EvaluateDatasetRun.cs/#L51"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Output only. Results for EvaluationService.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;evaluateDatasetResponse&quot;)]
-[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public EvaluateDatasetResponse? EvaluateDatasetResponse { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.EvaluateDatasetResponse.html">EvaluateDatasetResponse</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_Types_EvaluateDatasetRun_EvaluationRun_" data-uid="Google.GenAI.Types.EvaluateDatasetRun.EvaluationRun*"></a>
-
-  <h3 id="Google_GenAI_Types_EvaluateDatasetRun_EvaluationRun" data-uid="Google.GenAI.Types.EvaluateDatasetRun.EvaluationRun">
-  EvaluationRun
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/EvaluateDatasetRun.cs/#L62"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Output only. The resource name of the evaluation run. Format:
-<code>projects/{project}/locations/{location}/evaluationRuns/{evaluation_run_id}</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;evaluationRun&quot;)]
-[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public string? EvaluationRun { get; set; }</code></pre>
+public string? TunedTeacherModelSource { get; set; }</code></pre>
   </div>
 
 
@@ -293,21 +226,22 @@ public string? EvaluationRun { get; set; }</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_EvaluateDatasetRun_OperationName_" data-uid="Google.GenAI.Types.EvaluateDatasetRun.OperationName*"></a>
+  <a id="Google_GenAI_Types_DistillationSamplingSpec_ValidationDatasetUri_" data-uid="Google.GenAI.Types.DistillationSamplingSpec.ValidationDatasetUri*"></a>
 
-  <h3 id="Google_GenAI_Types_EvaluateDatasetRun_OperationName" data-uid="Google.GenAI.Types.EvaluateDatasetRun.OperationName">
-  OperationName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/EvaluateDatasetRun.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_DistillationSamplingSpec_ValidationDatasetUri" data-uid="Google.GenAI.Types.DistillationSamplingSpec.ValidationDatasetUri">
+  ValidationDatasetUri
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Deprecated: The updated architecture uses evaluation_run instead.</p>
+  <div class="markdown level1 summary"><p>Optional. Cloud Storage path to file containing validation dataset for distillation. The
+dataset must be formatted as a JSONL file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;operationName&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;validationDatasetUri&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public string? OperationName { get; set; }</code></pre>
+public string? ValidationDatasetUri { get; set; }</code></pre>
   </div>
 
 
@@ -331,19 +265,19 @@ public string? OperationName { get; set; }</code></pre>
 </h2>
 
 
-  <a id="Google_GenAI_Types_EvaluateDatasetRun_FromJson_" data-uid="Google.GenAI.Types.EvaluateDatasetRun.FromJson*"></a>
+  <a id="Google_GenAI_Types_DistillationSamplingSpec_FromJson_" data-uid="Google.GenAI.Types.DistillationSamplingSpec.FromJson*"></a>
 
-  <h3 id="Google_GenAI_Types_EvaluateDatasetRun_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.EvaluateDatasetRun.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
+  <h3 id="Google_GenAI_Types_DistillationSamplingSpec_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.DistillationSamplingSpec.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/EvaluateDatasetRun.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserializes a JSON string to a EvaluateDatasetRun object.</p>
+  <div class="markdown level1 summary"><p>Deserializes a JSON string to a DistillationSamplingSpec object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static EvaluateDatasetRun? FromJson(string jsonString, JsonSerializerOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static DistillationSamplingSpec? FromJson(string jsonString, JsonSerializerOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -358,8 +292,8 @@ public string? OperationName { get; set; }</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.EvaluateDatasetRun.html">EvaluateDatasetRun</a></dt>
-    <dd><p>The deserialized EvaluateDatasetRun object, or null if deserialization
+    <dt><a class="xref" href="Google.GenAI.Types.DistillationSamplingSpec.html">DistillationSamplingSpec</a></dt>
+    <dd><p>The deserialized DistillationSamplingSpec object, or null if deserialization
 fails.</p>
 </dd>
   </dl>
@@ -378,7 +312,7 @@ fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/EvaluateDatasetRun.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/stephentoub/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L30" class="edit-link">Edit this page</a>
         </div>
 
 
